@@ -1,14 +1,14 @@
 # MyCmatrix
 como el cmatrix :v
 
-# Sistema Operativo
+## Sistema Operativo
 linux :v
 
-# Que nesecito?
+## Que nesecito?
 libreria ncurses.h
 
-# Como compilar?
+## Como compilar?
 g++ matrix.cpp -o matrix_ -lncurses
 
-# Como Ejecutar?
+## Como Ejecutar?
 ./matrix_
