@@ -96,6 +96,8 @@ int main(int argc, char ** argv){
     int vol = 100;
     int t = 0;
     float tx = 0.05;
+    int _mxx;
+    int _mxy;
 
     int LEN = 60;
     Ast *A_[LEN];
@@ -104,7 +106,18 @@ int main(int argc, char ** argv){
     }
 
     while(1){
-	getmaxyx(stdscr, mxy, mxx);
+	getmaxyx(stdscr, _mxy, _mxx);
+	if(_mxx!=mxx || _mxy!=mxy){
+		clear();
+		for(int i=0; i<LEN; i++){
+			delete A_[i];
+			A_[i] = NULL;
+		}
+	}
+	mxx = _mxx;
+	mxy = _mxy;
+
+
         load_key();
 
 	t++;
